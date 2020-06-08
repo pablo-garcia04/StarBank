@@ -22,12 +22,14 @@ public class SavingsAccount extends Account{
         if (super.isIsActive()) {
             if (super.getBalance() >= 10000 + value + (value * 0.02)) {
                 this.setBalance(this.getBalance() - value - (value*Float.parseFloat("0.02")));
+                addOperation(value, "Retiro");
                 return value*Float.parseFloat("0.02");
             }
         }
         else{
             if(super.getBalance() >= value + (value*0.02)){
                 this.setBalance(this.getBalance() - value - (value*Float.parseFloat("0.02")));
+                addOperation(value, "Retiro");
                 return value*Float.parseFloat("0.02");
             }
         }

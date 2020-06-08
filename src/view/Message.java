@@ -110,4 +110,11 @@ public class Message {
     public static void getMessageSuccefullConsign() {
         JOptionPane.showMessageDialog(null, "Consignacion completa", "Operacion exitosa", JOptionPane.WARNING_MESSAGE);
     }
+
+    public static void getMessageSuccefullWithdraw() {
+        JOptionPane.showMessageDialog(null, "Retiro completo", "Operacion exitosa", JOptionPane.WARNING_MESSAGE);
+    }
+    public static void getMessageSuccefullClient() {
+        JOptionPane.showMessageDialog(null, "Cliente registrado", "Operacion exitosa", JOptionPane.WARNING_MESSAGE);
+    }
 }

@@ -123,7 +123,7 @@ public class WithdrawView extends javax.swing.JFrame {
         }
         float valueF = Float.parseFloat(value.getText());
         cashier.getOperator().updateBalanceAccount(id.getText(), valueF, false,cashier.idBranchOffice);
-        Message.getMessageSuccefullConsign();
+        Message.getMessageSuccefullWithdraw();
         cashier.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_withdrawBtnActionPerformed

@@ -77,12 +77,14 @@ public class Mediator {
         for (SavingsAccount saving : savings) {
             if (id.equals(saving.getId()) && saving.isIsActive()) {
                 saving.setIsActive(false);
+                saving.addOperation("Desactivacion");
                 isPatch1 = true;
             }
         }
         if (!isPatch1) {
             currents.stream().filter((current) -> (id.equals(current.getId()) && current.isIsActive())).forEachOrdered((current) -> {
                 current.setIsActive(false);
+                current.addOperation("Desactivacion");
             });
         }
         if (isPatch1) {

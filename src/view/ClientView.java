@@ -218,11 +218,13 @@ public class ClientView extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (type) {
             cashier.addClient(id.getText(), name.getText(), phone.getText(), address.getText(), occupation.getText());
+            Message.getMessageSuccefullClient();
             this.dispose();
             anterior.setVisible(true);
             
         }else{
             cashier.addClient(id.getText(), name.getText(), phone.getText(), address.getText(), occupation.getText(), cName.getText(), nit.getText(), sectorC.getText());
+            Message.getMessageSuccefullClient();
             this.dispose();
             anterior.setVisible(true);
         }
